@@ -51,9 +51,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="field" destination="kPj-lC-ia1" id="e3M-Gc-h8u"/>
+                        <outlet property="movieTableView" destination="RQF-he-XiP" id="nx6-Sf-xvc"/>
+                        <outlet property="searchField" destination="kPj-lC-ia1" id="e3M-Gc-h8u"/>
                         <outlet property="startImage" destination="KNf-IS-bas" id="1Dj-8R-rf2"/>
-                        <outlet property="table" destination="RQF-he-XiP" id="nx6-Sf-xvc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

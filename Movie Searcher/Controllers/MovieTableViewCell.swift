@@ -14,19 +14,6 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet var movieYearLabel: UILabel!
     @IBOutlet var movieImageView: UIImageView!
 
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
-        
-    }
-    
     static let identifier = "MovieTableViewCell"
     
     static func nib() -> UINib {
@@ -38,9 +25,5 @@ class MovieTableViewCell: UITableViewCell {
         self.movieYearLabel.text = model.Year
         let posterURL = model.Poster
         self.movieImageView.sd_setImage(with: URL(string: posterURL))
-//        if let data = try? Data(contentsOf: URL(string: posterURL)!) {
-//            self.movieImageView.image = UIImage(data: data)
-//        }
-        
     }
 }
