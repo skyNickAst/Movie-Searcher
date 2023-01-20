@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MovieTableViewCell: UITableViewCell {
     
     @IBOutlet var movieTitleLabel: UILabel!
     @IBOutlet var movieYearLabel: UILabel!
     @IBOutlet var movieImageView: UIImageView!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,9 +37,10 @@ class MovieTableViewCell: UITableViewCell {
         self.movieTitleLabel.text = model.Title
         self.movieYearLabel.text = model.Year
         let posterURL = model.Poster
-        if let data = try? Data(contentsOf: URL(string: posterURL)!) {
-            self.movieImageView.image = UIImage(data: data)
-        }
+        self.movieImageView.sd_setImage(with: URL(string: posterURL))
+//        if let data = try? Data(contentsOf: URL(string: posterURL)!) {
+//            self.movieImageView.image = UIImage(data: data)
+//        }
         
     }
 }

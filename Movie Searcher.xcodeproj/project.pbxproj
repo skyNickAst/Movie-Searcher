@@ -15,6 +15,7 @@
 		918C693D297A901600369460 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 918C693B297A901600369460 /* LaunchScreen.storyboard */; };
 		918C6946297AABFE00369460 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918C6944297AABFE00369460 /* MovieTableViewCell.swift */; };
 		918C6947297AABFE00369460 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 918C6945297AABFE00369460 /* MovieTableViewCell.xib */; };
+		918C694A297ABB4500369460 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 918C6949297ABB4500369460 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				918C694A297ABB4500369460 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +91,9 @@
 			dependencies = (
 			);
 			name = "Movie Searcher";
+			packageProductDependencies = (
+				918C6949297ABB4500369460 /* SDWebImage */,
+			);
 			productName = "Movie Searcher";
 			productReference = 918C692D297A901400369460 /* Movie Searcher.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 918C6924297A901400369460;
+			packageReferences = (
+				918C6948297ABB4500369460 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 918C692E297A901400369460 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -366,6 +374,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		918C6948297ABB4500369460 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		918C6949297ABB4500369460 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 918C6948297ABB4500369460 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 918C6925297A901400369460 /* Project object */;
 }

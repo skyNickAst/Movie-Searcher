@@ -12,6 +12,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     
     @IBOutlet var table: UITableView!
     @IBOutlet var field: UITextField!
+    @IBOutlet var startImage: UIImageView!
     
     var movies = [Movie]()
     
@@ -25,6 +26,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         searchMovie()
+        startImage.alpha = 0
+        field.text = ""
         return true
     }
     
@@ -49,6 +52,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
             // Resfresh our table
             DispatchQueue.main.async {
                 self.table.reloadData()
+                let indexPath = IndexPath(row: 0 , section: 0)
+                self.table.scrollToRow(at: indexPath, at: .top, animated: true)
             }
             
             
